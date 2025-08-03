@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bookEditor">
+    <header class="top-bar">
+      <a href="index.html" class="back-btn">&larr; Back to Projects</a>
+      <h2 id="editor-title">Book Title</h2>
+      <div class="top-actions">
+        <button class="btn" id="fileBtn">File</button>
+        <button class="btn" id="previewBtn">Preview</button>
+        <button class="btn" id="askAiBtn">Ask AI</button>
+        <button class="btn" id="voiceBtn">Voice</button>
+        <select id="languageSelect">
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+        </select>
+        <button class="btn primary" id="publishBtn">Publish</button>
+      </div>
+    </header>
+    <div class="editor-container">
+      <aside class="chapters-sidebar">
+        <h3>Chapters</h3>
+        <div id="chaptersList">
+          <!-- Chapters will be rendered here -->
+        </div>
+        <button id="addChapterBtn" class="add-scene-btn">+ Add Chapter</button>
+      </aside>
+      <section class="editor-area">
+        <div class="toolbar" id="editorToolbar">
+          <button type="button" data-command="bold"><strong>B</strong></button>
+          <button type="button" data-command="italic"><em>I</em></button>
+          <button type="button" data-command="underline"><u>U</u></button>
+          <button type="button" data-command="insertOrderedList">&#35;</button>
+          <button type="button" data-command="insertUnorderedList">&#8226;</button>
+        </div>
+        <div id="editor" class="text-editor" contenteditable="true"></div>
+      </section>
+      <aside class="planning-panel">
+        <h3>Planning Panel</h3>
+        <div class="planning-section">
+          <h4>Braindump</h4>
+          <textarea id="braindump" placeholder="Capture your ideas..."></textarea>
+        </div>
+        <div class="planning-section">
+          <h4>Genre & Style</h4>
+          <textarea id="genreStyle" placeholder="Describe the style and tone..."></textarea>
+        </div>
+        <div class="planning-section">
+          <h4>Synopsis</h4>
+          <textarea id="synopsis" placeholder="Write a brief synopsis..."></textarea>
+        </div>
+        <div class="planning-section">
+          <h4>Characters</h4>
+          <ul id="charactersList" class="characters-list">
+            <!-- Characters inserted here -->
+          </ul>
+          <div class="add-character-form">
+            <input type="text" id="characterName" placeholder="Character name" />
+            <input type="text" id="characterRole" placeholder="Role (e.g., protagonist)" />
+            <textarea id="characterDescription" placeholder="Short description"></textarea>
+            <button type="button" id="addCharacterBtn">Add Character</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

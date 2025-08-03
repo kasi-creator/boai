@@ -1,0 +1,37 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header, .top-bar {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin: 0 4px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editor-container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.text-editor {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+}
